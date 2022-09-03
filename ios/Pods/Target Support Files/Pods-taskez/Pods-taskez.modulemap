@@ -1,0 +1,6 @@
+module Pods_taskez {
+  umbrella header "Pods-taskez-umbrella.h"
+
+  export *
+  module * { export * }
+}
