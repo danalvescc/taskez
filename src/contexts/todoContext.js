@@ -9,28 +9,28 @@ export const ToDoProvider = ({children}) => {
       title: 'Gym',
       subtitle: 'LegDay',
       description: 'Show all exercises todo',
-      complited: true,
+      done: true,
     },
     {
       id: 1,
       title: 'Gym2',
       subtitle: 'LegDay',
       description: 'Show all exercises todo',
-      complited: false,
+      done: false,
     },
     {
       id: 2,
       title: 'Gym3',
       subtitle: 'LegDay',
       description: 'Show all exercises todo',
-      complited: false,
+      done: false,
     },
     {
       id: 3,
       title: 'Gym4',
       subtitle: 'LegDay',
       description: 'Show all exercises todo',
-      complited: false,
+      done: false,
     },
   ]);
 

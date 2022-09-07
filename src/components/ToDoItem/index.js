@@ -1,13 +1,17 @@
+import colors from '@constants/colors';
 import React from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {Container, InputTask, DetailStack, Title, SubTitle} from './style';
 
-const ToDoItem = () => {
+const ToDoItem = ({title, subtitle, done}) => {
   return (
     <Container>
-      <InputTask />
+      <InputTask checked={done}>
+        {done && <Icon name="check" size={18} color={colors.WHITE} />}
+      </InputTask>
       <DetailStack>
-        <Title>Sei nao</Title>
-        <SubTitle>Sei nao ao quadrado</SubTitle>
+        <Title>{title}</Title>
+        <SubTitle>{subtitle}</SubTitle>
       </DetailStack>
     </Container>
   );

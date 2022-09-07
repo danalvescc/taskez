@@ -19,7 +19,7 @@ const Home = () => {
             key={item.id}
             title={item.title}
             subtitle={item.subtitle}
-            completed={item.completed}
+            done={item.done}
           />
         ))}
       </SafeAreaView>
