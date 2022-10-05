@@ -1,11 +1,13 @@
 import React from 'react';
-import Home from '@screens/Home';
 import {ToDoProvider} from '@contexts/todoContext';
+import TabNavigation from '@routes/TabNavigation';
+
+const navigationRef = React.createRef();
 
 const App = () => {
   return (
     <ToDoProvider>
-      <Home />
+      <TabNavigation navigationRef={navigationRef} />
     </ToDoProvider>
   );
 };

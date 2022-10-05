@@ -33,6 +33,24 @@ export const ToDoProvider = ({children}) => {
       done: false,
     },
   ]);
+  const [groupList, setGroupList] = useState([
+    {
+      id: 0,
+      title: 'Gym',
+    },
+    {
+      id: 1,
+      title: 'Market',
+    },
+    {
+      id: 2,
+      title: 'Work',
+    },
+    {
+      id: 3,
+      title: 'Home',
+    },
+  ]);
 
   const createToDo = item => {
     if (!item.title) {
@@ -60,6 +78,7 @@ export const ToDoProvider = ({children}) => {
     <ToDoContext.Provider
       value={{
         toDoList,
+        groupList,
         createToDo,
         changeToDo,
       }}>
