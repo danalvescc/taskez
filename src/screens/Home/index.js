@@ -1,41 +1,23 @@
-import React from 'react';
-import {FlatList, SafeAreaView, ScrollView} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {SafeAreaView} from 'react-native';
 
 import {useToDo} from '@contexts/todoContext';
 
 import {Container} from './style';
-import Title from '@components/Title';
-import ToDoItem from '@components/ToDoItem';
-import GroupItem from '@components/GroupItem';
+import GroupList from '@components/GroupList';
+import ItemList from '@components/ItemList';
 
 const Home = () => {
-  const {toDoList, groupList} = useToDo();
-  const renderGroupList = item => (
-    <GroupItem key={item.id} title={item.title} />
-  );
+  const [selectedGroup, setSelectedGroup] = useState();
 
   return (
     <Container>
       <SafeAreaView>
-        <Title>Your Groups</Title>
-        <FlatList
-          horizontal={true}
-          data={groupList}
-          renderItem={renderGroupList}
-          keyExtractor={item => item.id}
-          showsHorizontalScrollIndicator={false}
+        <GroupList
+          setSelectedGroup={setSelectedGroup}
+          selectedGroup={selectedGroup}
         />
-        <Title>Your Tasks</Title>
-        <ScrollView>
-          {toDoList?.map(item => (
-            <ToDoItem
-              key={item.id}
-              title={item.title}
-              subtitle={item.subtitle}
-              done={item.done}
-            />
-          ))}
-        </ScrollView>
+        <ItemList selectedGroup={selectedGroup} />
       </SafeAreaView>
     </Container>
   );

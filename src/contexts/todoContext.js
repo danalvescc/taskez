@@ -9,6 +9,7 @@ export const ToDoProvider = ({children}) => {
       title: 'Gym',
       subtitle: 'LegDay',
       description: 'Show all exercises todo',
+      group: 1,
       done: true,
     },
     {
@@ -16,6 +17,7 @@ export const ToDoProvider = ({children}) => {
       title: 'Gym2',
       subtitle: 'LegDay',
       description: 'Show all exercises todo',
+      group: 1,
       done: false,
     },
     {
@@ -23,6 +25,7 @@ export const ToDoProvider = ({children}) => {
       title: 'Gym3',
       subtitle: 'LegDay',
       description: 'Show all exercises todo',
+      group: 2,
       done: false,
     },
     {
@@ -30,6 +33,7 @@ export const ToDoProvider = ({children}) => {
       title: 'Gym4',
       subtitle: 'LegDay',
       description: 'Show all exercises todo',
+      group: 3,
       done: false,
     },
   ]);

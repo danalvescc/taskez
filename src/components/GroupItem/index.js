@@ -1,12 +1,9 @@
 import React from 'react';
 import {Container, Image, Title} from './style';
-
-const GroupItem = ({title}) => {
-  //const background = Math.floor(Math.random() * (15 - 1 + 1)) + 1;
-  const img = require('@assets/images/background/background1.jpg');
+const GroupItem = ({title, image, onPress, selected}) => {
   return (
-    <Container>
-      <Image source={img} />
+    <Container onPress={onPress} selected={selected}>
+      <Image source={image} />
       <Title>{title}</Title>
     </Container>
   );
